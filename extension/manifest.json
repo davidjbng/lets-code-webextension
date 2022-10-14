@@ -7,5 +7,13 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "icons": {
+    "128": "lego.png"
+  },
+  "browser_action": {
+    "default_icon": "lego.png",
+    "default_title": "My Webextension",
+    "default_popup": "popup.html"
+  }
 }
