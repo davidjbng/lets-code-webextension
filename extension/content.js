@@ -1,3 +1,16 @@
-console.log("Hello world");
+"use strict";
+import browser from "webextension-polyfill";
 
-document.body.style.border = "5px solid red";
+console.log("Content script loaded");
+
+function cats() {
+  console.log("Hello from Popup");
+}
+
+browser.runtime.onMessage.addListener((message) => {
+  if (message.command === "cats") {
+    cats();
+  } else {
+    console.warn(`Received unknown message '${message.command}'`);
+  }
+});
