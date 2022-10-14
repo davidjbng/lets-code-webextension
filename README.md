@@ -4,10 +4,12 @@ Collection of Material for a Web Extension workshop
 
 ## Getting Started
 
+Make sure you have [pnpm](https://pnpm.js.org/) installed
+
 ```sh
 cd extension
-npm i
-npm run dev
+pnpm i
+pnpm run dev
 ```
 
 ## Links
