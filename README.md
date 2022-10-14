@@ -4,7 +4,7 @@ Collection of Material for a Web Extension workshop
 
 ## Getting Started
 
-```shell
+```sh
 cd extension
 npm i
 npm run dev
@@ -18,7 +18,7 @@ npm run dev
 
 ## Recommended VSCode Setting
 
-```json
+```jsonc
 {
   // adds json schema for chrome manifest
   "json.schemas": [
