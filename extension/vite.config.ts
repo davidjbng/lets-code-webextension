@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from "vite";
 import webExtension from "@samrum/vite-plugin-web-extension";
 import path from "path";
 import { getManifest } from "./src/manifest";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -9,14 +10,13 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [
+      tsconfigPaths(),
       webExtension({
         manifest: getManifest(Number(env.MANIFEST_VERSION)),
       }),
     ],
-    resolve: {
-      alias: {
-        "~": path.resolve(__dirname, "./src"),
-      },
+    build: {
+      outDir: path.resolve(__dirname, "./dist"),
     },
   };
 });

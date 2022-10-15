@@ -7,9 +7,13 @@
   "scripts": {
     "build": "tsc && vite build",
     "watch": "vite build --watch",
-    "dev": "vite",
-    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
-    "serve:chrome": "web-ext run -t chromium --start-url \"https://google.com\" --source-dir ./dist/"
+    "vite": "vite",
+    "dev": "npm run dev:chrome",
+    "dev:chrome": "concurrently npm:vite npm:serve:chrome",
+    "dev:firefox": "concurrently npm:vite npm:serve:firefox",
+    "serve:firefox": "npm run wait-on && web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "serve:chrome": "npm run wait-on && web-ext run -t chromium --start-url \"chrome://extensions\" --source-dir ./dist/",
+    "wait-on": "wait-on ./dist/manifest.json"
   },
   "license": "MIT",
   "devDependencies": {
@@ -17,8 +21,11 @@
     "@types/chrome": "^0.0.197",
     "@types/node": "^18.11.0",
     "@types/webextension-polyfill": "^0.9.1",
+    "concurrently": "^7.4.0",
     "typescript": "^4.8.4",
     "vite": "~3.1.8",
+    "vite-tsconfig-paths": "^3.5.1",
+    "wait-on": "^6.0.1",
     "web-ext": "^7.3.0"
   },
   "dependencies": {

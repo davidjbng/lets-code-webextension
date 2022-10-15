@@ -9,7 +9,7 @@ Make sure you have [pnpm](https://pnpm.js.org/) installed
 ```sh
 cd extension
 pnpm i
-pnpm run dev
+pnpm dev
 ```
 
 ## Ideas

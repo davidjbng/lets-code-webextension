@@ -3,7 +3,7 @@ import pkg from "../package.json";
 const sharedManifest = {
   content_scripts: [
     {
-      js: ["src/entries/contentScript/primary/main.ts"],
+      js: ["src/contentScript/primary/main.ts"],
       matches: ["*://*/*"],
     },
   ],
@@ -20,7 +20,7 @@ const sharedManifest = {
     512: "icons/512.png",
   },
   options_ui: {
-    page: "src/entries/options/index.html",
+    page: "src/options/index.html",
     open_in_tab: true,
   },
   permissions: [],
@@ -33,13 +33,13 @@ const browserAction = {
     32: "icons/32.png",
     38: "icons/38.png",
   },
-  default_popup: "src/entries/popup/index.html",
+  default_popup: "src/popup/index.html",
 };
 
 const ManifestV2 = {
   ...sharedManifest,
   background: {
-    scripts: ["src/entries/background/script.ts"],
+    scripts: ["src/background/script.ts"],
     persistent: false,
   },
   browser_action: browserAction,
@@ -54,12 +54,14 @@ const ManifestV3 = {
   ...sharedManifest,
   action: browserAction,
   background: {
-    service_worker: "src/entries/background/serviceWorker.ts",
+    service_worker: "src/background/serviceWorker.ts",
   },
   host_permissions: ["*://*/*"],
 };
 
-export function getManifest(manifestVersion: number): chrome.runtime.ManifestV2 | chrome.runtime.ManifestV3 {
+export function getManifest(
+  manifestVersion: number
+): chrome.runtime.ManifestV2 | chrome.runtime.ManifestV3 {
   const manifest = {
     author: pkg.author,
     description: pkg.description,
