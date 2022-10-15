@@ -1,6 +1,6 @@
-# lets-code-webextension
+# Let's Code Webextension
 
-Collection of Material for a Web Extension workshop
+Collection of material for a web extension workshop
 
 ## Getting Started
 
@@ -12,24 +12,24 @@ pnpm i
 pnpm run dev
 ```
 
+## Ideas
+
+TODO
+
 ## Links
 
-- [Your First Webextension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [Firefox Debugging](https://extensionworkshop.com/documentation/develop/debugging/)
-- [Chrome Debugging](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/)
+### Firefox
 
-## Recommended VSCode Setting
+- [Extension Workshop](https://extensionworkshop.com/documentation/develop/)
+- [Debugging](https://extensionworkshop.com/documentation/develop/debugging/)
 
-```jsonc
-{
-  // adds json schema for chrome manifest
-  "json.schemas": [
-    {
-      "fileMatch": ["manifest.json"],
-      "url": "https://json.schemastore.org/chrome-manifest"
-    }
-  ],
-  // enables type checking for js files
-  "js/ts.implicitProjectConfig.checkJs": true
-}
-```
+### Chrome
+
+- [Getting Started](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
+- [Debugging](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/)
+
+## Simple Example
+
+The Example only includes essential files like [](simple-example/content.js) and [](simple-example/popup.html).
+
+Based on [Your First Webextension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)

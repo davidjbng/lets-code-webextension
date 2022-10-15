@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "My Webextension",
   "version": "1.0",
   "content_scripts": [
@@ -11,9 +11,7 @@
   "icons": {
     "128": "lego.png"
   },
-  "browser_action": {
-    "default_icon": "lego.png",
+  "action": {
     "default_popup": "popup.html"
-  },
-  "permissions": ["tabs", "activeTab", "http://*/", "https://*/"]
+  }
 }
