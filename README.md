@@ -1,4 +1,4 @@
-# Let's Code Webextension
+# Let's Code A Webextension
 
 Collection of material for a web extension workshop
 
@@ -7,7 +7,7 @@ Collection of material for a web extension workshop
 Only essential files like [content script](simple-example/content.js) and [popup](simple-example/popup.html),
 no build step required
 
-> A bit harder extend functionality with npm packages
+> A bit harder to extend functionality with npm packages
 
 ## Example 2: Vite React
 
