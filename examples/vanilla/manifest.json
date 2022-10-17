@@ -1,16 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "My Webextension",
+  "name": "Vanilla Webextension",
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
   ],
-  "icons": {
-    "128": "lego.png"
-  },
   "action": {
     "default_popup": "popup.html"
   }
