@@ -7,7 +7,7 @@ Collection of material for a web extension workshop
 Only essential files like [content script](simple-example/content.js) and [popup](simple-example/popup.html),
 no build step required
 
-> A bit harder to extend functionality with npm packages
+> A bit harder to extend functionality using npm packages
 
 ## Example 2: Vite React
 
@@ -22,7 +22,7 @@ Based on [@samrum/vite-plugin-web-extension](https://github.com/samrum/vite-plug
 - Word Replacer
 - Image Manipulation
 - Custom Animations
-- Accept Cookies
+- Auto decline Cookies
 - Form Autofill Helper
 - Code Syntax Highlighting
 
